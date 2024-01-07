@@ -1,0 +1,31 @@
+# Configuration version (required)
+version: 1.0.0
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+# Definition of custom endpoints
+endpoints:
+    - name: "ZukiJourney"
+      
+      apiKey: "${ZJ_API_KEY}"
+      baseURL: "https://zukijourney.xyzbot.net/v1/"
+      models:
+        default: ["gpt-4-vision", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo-16k", "gpt-3.5-turbo", "claude-2.1", "claude-instant-1", "bard"]
+        fetch: true
+
+      titleConvo: true
+      titleMethod: "completion"
+      titleModel: "gpt-3.5-turbo"
+      summarize: false
+      summaryModel: "gpt-3.5-turbo"
+      forcePrompt: false
+      modelDisplayLabel: "ZukiJourney"
+      addParams:
+        safe_mode: true
+      dropParams: ["stop", "temperature", "top_p"]
+      iconURL: "https://storage.ko-fi.com/cdn/useruploads/9a384bf6-d65c-4503-a1bf-4d26b01f5891_5bc18d37-2bda-49b8-9e47-7d0b4989774f.png"
+
+
+# See the Custom Configuration Guide for more information:
+# https://docs.librechat.ai/install/configuration/custom_config.html
